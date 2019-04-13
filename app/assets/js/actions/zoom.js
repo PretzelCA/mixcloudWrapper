@@ -3,7 +3,7 @@ const ipc = electron.ipcRenderer
 const webFrame = electron.webFrame
 const maximumZoomLevel = 3
 
-const {Menu} = electron.remote
+const { Menu } = electron.remote
 
 var currentZoomLevel, zoomMenuItems
 

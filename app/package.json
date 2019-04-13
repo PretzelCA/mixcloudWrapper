@@ -1,26 +1,27 @@
 {
-  "name": "SkelEktron",
-  "productName": "SkelEktron",
-  "description": "Electron Template Desktop Application",
-  "version": "0.0.7",
-  "homepage": "https://github.com/BZCoding/SkelEktron",
+  "name": "mixcloudWrapper",
+  "productName": "Mixcloud Wrapper",
+  "description": "Unofficial Mixcloud Wrapper made in Electron",
+  "version": "0.0.1",
+  "homepage": "https://github.com/PretzelCA/mixcloudWrapper",
   "author": {
-    "name": "BZ Coding",
-    "email": "hello@bzcoding.com",
-    "url": "https://bzcoding.com/"
+    "name": "Skye Viau",
+    "email": "skye.viau@gmail.com",
+    "url": "http://skyenet.gq"
   },
   "license": "MIT",
   "main": "main.js",
   "electronVersion": "1.7.10",
   "dependencies": {
     "devtron": "^1",
+    "electron-ad-blocker": "https://github.com/ErraticFox/electron-ad-blocker.git",
     "electron-debug": "^1",
     "electron-is-dev": "^0.1",
     "electron-window-state": "^3",
     "lodash": ">=4.17.5"
   },
   "config": {
-    "url": "index.html",
+    "url": "https://www.mixcloud.com/",
     "update": {
       "url": false
     }

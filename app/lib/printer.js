@@ -54,7 +54,7 @@ function printTXTTest (device, callback) {
   console.debug('Trying to print file: ' + filename)
 
   if (process.platform !== 'win32') {
-    np.printFile({filename: filename,
+    np.printFile({ filename: filename,
       printer: device.name,
       success: function (jobID) {
         console.info('Job sent to printer with ID: ' + jobID)
@@ -67,7 +67,6 @@ function printTXTTest (device, callback) {
     })
   } else {
     // not yet implemented, use printDirect and text
-    return callback('Sorry, printing not supported on Windows :(')
   }
 }
 
@@ -78,7 +77,7 @@ function printPDFTest (device, callback) {
   console.debug('Trying to print file: ' + filename)
 
   if (process.platform === 'win32') {
-    return callback('Sorry, printing not supported on Windows :(')
+    // not yet implemented, use printDirect and text
   }
   fs.readFile(filename, function (err, data) {
     if (err) {

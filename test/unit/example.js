@@ -15,7 +15,7 @@ describe('(unit) example suite', () => {
 
   describe('feature 1', () => {
     it('should pass', (done) => {
-      expect(true).to.be.ok
+      expect(true)
       done()
     })
 

@@ -9,9 +9,17 @@ const path = require('path')
 const pjson = require('./package.json')
 const _ = require('lodash')
 const windowStateKeeper = require('electron-window-state')
+// const { blockWindowAds, adBlocker } = require('electron-ad-blocker')
 
+// Adblocker options
+/**
+const adBlockerOptions = {
+  verbose: true,
+  logger: console
+}
+**/
 // Use system log facility, should work on Windows too
-require('./lib/log')(pjson.productName || 'SkelEktron')
+require('./lib/log')(pjson.productName || 'Mixcloud Wrapper')
 
 // Manage unhandled exceptions as early as possible
 process.on('uncaughtException', (e) => {
@@ -51,7 +59,7 @@ let mainWindow
 // Other windows we may need
 let infoWindow = null
 
-app.setName(pjson.productName || 'SkelEktron')
+app.setName(pjson.productName || 'Mixcloud Wrapper')
 
 function initialize () {
   var shouldQuit = makeSingleInstance()
@@ -94,7 +102,8 @@ function initialize () {
     mainWindowState.manage(win)
 
     // Remove file:// if you need to load http URLs
-    win.loadURL(`file://${__dirname}/${pjson.config.url}`, {})
+    win.loadURL(`${pjson.config.url}`, {})
+    console.log('Loading ' + `${pjson.config.url}`)
 
     win.on('closed', onClosed)
 
